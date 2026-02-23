@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWU PHINMA - College of Information Technology</title>
+    <link rel="icon" type="image/png" href="assets/images/branding/logos/SWU-PHINMA-Seal.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="https://swu.phinma.edu.ph/" target="_blank" class="logo">
+                <img src="assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">
+            </a>
+            <div class="logo-divider"></div>
+            <div class="logo it-logo">
+                <a href="#">
+                <img src="assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://swu.phinma.edu.ph/about-swu/" target="_blank">About SWU</a></li>
+                        <li><a href="pages/about-swu-it.html">About SWU-IT</a></li>
+                        <li><a href="pages/virtual-tour.html">Virtual Tour</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Student Life <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#student-outputs-section">Student Outputs</a></li>
+                        <li><a href="pages/organizations.html">Organizations</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Admission <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">How to Apply</a></li>
+                        <li><a href="#">Requirements</a></li>
+                        <li><a href="#">Tuition Fees</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="slider">
+            <div class="slide active">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="assets/videos/random_loop.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide"><img src="assets/images/gallery/rvr_opening.png" alt="SWU RVR Building" class="bg-media"></div>
+            <div class="slide"><img src="assets/images/gallery/magna_people.png" alt="IT Magna Cum Laude Graduates" class="bg-media"></div>
+            <div class="slide"><img src="assets/images/gallery/community.jpg" alt="Graduation" class="bg-media"></div>
+        </div>
+
+        <div class="hero-content">
+            <a href="#admissions" class="admissions-badge">● Admissions Open for 2026-2027</a>
+            <h1>Shaping Future<br><span class="highlight">IT Professionals</span></h1>
+            <p>The College of Information Technology at Southwestern University PHINMA is committed to fostering innovation and hands-on learning.</p>
+        </div>
+
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="indicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card"><i class="fas fa-users"></i><div><h2>500+</h2><p>Active Students</p></div></div>
+            <div class="stat-card"><i class="fas fa-briefcase"></i><div><h2>15+</h2><p>Industry Partners</p></div></div>
+            <div class="stat-card"><i class="fas fa-chart-line"></i><div><h2>95%</h2><p>Employment Rate</p></div></div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-gray">
+        <div class="section-header text-center">
+            <h2>Empowering the Next Generation of Tech Leaders</h2>
+            <p>Click a card to learn more about our specializations.</p>
+        </div>
+        <div class="career-grid">
+            <div class="career-card">
+                <div class="icon-circle"><i class="fas fa-code"></i></div>
+                <h3>Software Developer</h3>
+                <p>Creates applications and programs to solve problems.</p>
+            </div>
+            <div class="career-card">
+                <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+                <h3>Computer Network Security</h3>
+                <p>Protects systems and networks from cyber threats.</p>
+            </div>
+            <div class="career-card">
+                <div class="icon-circle"><i class="fas fa-chart-bar"></i></div>
+                <h3>Data Analytics</h3>
+                <p>Analyzes data to support smart decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="learning-path-section">
+        <div class="section-header text-center">
+            <h2>Core Technologies</h2>
+            <p>Our curriculum is built on industry-standard programming languages and frameworks.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card"><i class="fab fa-java java-color"></i><h4>Java</h4><p>Enterprise Apps</p></div>
+            <div class="tech-card"><i class="fab fa-python python-color"></i><h4>Python</h4><p>Data Science & AI</p></div>
+            <div class="tech-card"><i class="fab fa-html5 html-color"></i><h4>HTML5</h4><p>Web Structure</p></div>
+            <div class="tech-card"><i class="fab fa-css3-alt css-color"></i><h4>CSS3</h4><p>Styling & Layout</p></div>
+            <div class="tech-card"><i class="fab fa-js js-color"></i><h4>JavaScript</h4><p>Interactive Web</p></div>
+        </div>
+        <div class="text-center">
+            <a href="javascript:void(0)" class="btn-red" id="viewPathBtn">
+                View Learning Path <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Campus Life & Programs Section -->
+    <section class="campus-programs-section">
+        <!-- Row 1: Competitive IT Excellence -->
+        <div class="campus-row">
+            <div class="campus-content">
+                <h2>Competitive IT Excellence</h2>
+                <p>Our institution stands at the forefront of technology education, preparing students to excel in the competitive IT industry. With cutting-edge curriculum, industry partnerships, and hands-on learning opportunities, we empower our students to become innovators and leaders. Our graduates consistently secure positions at top tech companies and contribute meaningfully to the advancement of technology in the Philippines and beyond.</p>
+            </div>
+            <div class="campus-image">
+                <div class="image-placeholder">
+                    <!-- ADD YOUR IMAGE HERE: Replace src with your image path -->
+                    <img src="assets/images/organizations/Lead2Lead.jpg" alt="Competitive IT Excellence">
+                    <!-- Example: <img src="assets/images/your-image.jpg" alt="Description"> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Vibrant Campus Experience -->
+        <div class="campus-row reverse">
+            <div class="campus-image">
+                <div class="image-placeholder">
+                    <!-- ADD YOUR IMAGE HERE: Replace the icon below with <img src="assets/images/your-image.jpg" alt="Description"> -->
+                    <img src="assets/images/organizations/VibrantExp.jpg">
+                </div>
+            </div>
+            <div class="campus-content">
+                <h2>Vibrant Campus Experience</h2>
+                <p>A vibrant campus experience is a dynamic and diverse environment where students engage socially and academically. It includes a wide range of clubs, events, and academic opportunities that foster friendships and intellectual growth. The campus itself is aesthetically pleasing and inclusive, celebrating diversity and leaving students with lifelong memories and personal development.</p>
+            </div>
+        </div>
+
+        <!-- Row 3: Big Brother Big Sister System -->
+        <div class="campus-row">
+            <div class="campus-content">
+                <h2>Big Brother Big Sister System</h2>
+                <p>Our mentorship program connects senior IT students with incoming freshmen, creating a supportive network that enhances academic success and personal growth. Upper-level students provide guidance on coursework, share industry insights, and help navigate university life. This peer mentoring system builds lasting relationships, fosters a strong sense of community, and ensures every student has the support they need to thrive in their academic journey.</p>
+            </div>
+            <div class="campus-image">
+                <div class="image-placeholder">
+                    <!-- ADD YOUR IMAGE HERE: Replace the icon below with <img src="assets/images/your-image.jpg" alt="Description"> -->
+                    <img src="assets/images/organizations/BigBro.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Student Outputs Section -->
+    <section class="section-padding bg-gray" id="student-outputs-section">
+        <div class="outputs-header">
+            <span class="section-badge">Productivity & Excellence</span>
+            <h2>Student Innovations</h2>
+            <p>Showcasing the creativity, technical skills, and problem-solving abilities of our students through their applied projects.</p>
+        </div>
+
+        <div class="outputs-carousel-wrapper">
+            <button class="outputs-nav-btn prev-outputs-btn" aria-label="Previous projects">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="outputs-carousel">
+                <div class="outputs-track">
+                    <!-- Project 1 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <img src="assets/images/projects/logos/HWLogo.png">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Website Application</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>HealthWatch</h3>
+                            <p>AI-Powered Community Health Surveillance System</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">IGNITE (BSIT1-A2)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <img src="assets/images/projects/logos/eBayanLogo.jpg">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Website Application</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>eBayan</h3>
+                            <p>A digital unified government platform for citizen services and public engagement.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">IV of Spades (BSIT1-A1)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <img src="assets/images/projects/logos/VaLiCheckLogo.png">
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Web Application</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>ValiCheck</h3>
+                            <p>A modern digital motor vehicle verification system.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">Unli Rice (BSIT3-C1)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-shield-alt output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Cybersecurity</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Network Security Dashboard</h3>
+                            <p>Real-time monitoring system for detecting and preventing network intrusions.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">Security Team Beta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-chart-line output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Data Analytics</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Sales Forecasting Tool</h3>
+                            <p>Python-based analytics platform using machine learning for business predictions.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">Data Science Group</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-shopping-cart output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">E-Commerce</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Online Marketplace Platform</h3>
+                            <p>Full-stack e-commerce solution with payment integration and inventory management.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">BSIT-4 Group A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-heartbeat output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Healthcare</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Patient Management System</h3>
+                            <p>Hospital information system for managing patient records and appointments.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">HealthTech Team</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-gamepad output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">Game Development</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Educational Quiz Game</h3>
+                            <p>Interactive learning game for students using Unity and C# programming.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">GameDev Squad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="output-card">
+                        <div class="output-card-image">
+                            <i class="fas fa-robot output-icon"></i>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                        <div class="output-card-content">
+                            <div class="output-header">
+                                <span class="output-category">AI & Automation</span>
+                                <i class="fas fa-arrow-up-right-from-square output-link-icon"></i>
+                            </div>
+                            <h3>Chatbot Assistant</h3>
+                            <p>AI-powered chatbot for customer support using natural language processing.</p>
+                            <div class="output-footer">
+                                <span class="developer-label">Developed by:</span>
+                                <span class="developer-name">AI Innovation Lab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="outputs-nav-btn next-outputs-btn" aria-label="Next projects">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="outputs-indicators">
+            <span class="outputs-dot active" data-page="0"></span>
+            <span class="outputs-dot" data-page="1"></span>
+            <span class="outputs-dot" data-page="2"></span>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="outputs.html" class="btn-red">
+                View More Outputs <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Career Specialization Modal -->
+    <div id="careerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"><i class="fas fa-laptop-code"></i></div>
+                <div class="header-text">
+                    <h2 id="modalTitle">Title</h2>
+                    <p id="modalDesc">Description goes here...</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-column">
+                        <h3><i class="fas fa-book-open"></i> Core Courses</h3>
+                        <ul id="coreCourses"></ul>
+                    </div>
+                    <div class="modal-column">
+                        <h3><i class="fas fa-briefcase"></i> Career Opportunities</h3>
+                        <ul id="careerOps"></ul>
+                    </div>
+                </div>
+                <div class="modal-footer-grid">
+                    <div class="tags-section">
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <div id="toolsTags" class="tag-container"></div>
+                    </div>
+                    <div class="tags-section">
+                        <h3><i class="fas fa-graduation-cap"></i> Skills</h3>
+                        <div id="skillsTags" class="tag-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Core Technologies Learning Path Modal -->
+<div id="techPathModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="header-text">
+                <h2>Core Technologies Learning Path</h2>
+                <p>Our comprehensive curriculum ensures students master the most in-demand programming languages and technologies used in the industry today.</p>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            <div class="tech-carousel-wrapper">
+                <button class="carousel-arrow prev-arrow" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="tech-carousel">
+                    <div class="tech-slide-track">
+                        <!-- Java Slide -->
+                        <div class="tech-slide" data-tech="java">
+                            <div class="tech-slide-left">
+                                <div class="tech-icon-large">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <h3>Java</h3>
+                                <p class="tech-role">Enterprise Applications</p>
+                            </div>
+                            <div class="tech-slide-right">
+                                <div class="tech-description">
+                                    <p>Industry-standard language for building robust, scalable enterprise applications. Students learn object-oriented programming, data structures, and software design patterns.</p>
+                                </div>
+                                <div class="projects-section">
+                                    <h4><i class="fas fa-tasks"></i> Sample Projects</h4>
+                                    <ul class="project-list">
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Library Management System</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Banking Application</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> E-commerce Platform</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Python Slide -->
+                        <div class="tech-slide" data-tech="python">
+                            <div class="tech-slide-left">
+                                <div class="tech-icon-large">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h3>Python</h3>
+                                <p class="tech-role">Data Science & AI</p>
+                            </div>
+                            <div class="tech-slide-right">
+                                <div class="tech-description">
+                                    <p>Versatile language used for data analysis, machine learning, and automation. Students work with popular libraries like NumPy, Pandas, and TensorFlow.</p>
+                                </div>
+                                <div class="projects-section">
+                                    <h4><i class="fas fa-tasks"></i> Sample Projects</h4>
+                                    <ul class="project-list">
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Data Analytics Dashboard</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Machine Learning Models</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Web Scraping Tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- HTML5 Slide -->
+                        <div class="tech-slide" data-tech="html">
+                            <div class="tech-slide-left">
+                                <div class="tech-icon-large">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <h3>HTML5</h3>
+                                <p class="tech-role">Web Structure</p>
+                            </div>
+                            <div class="tech-slide-right">
+                                <div class="tech-description">
+                                    <p>Foundation of web development. Students master semantic markup, accessibility standards, and modern HTML5 features for building structured web content.</p>
+                                </div>
+                                <div class="projects-section">
+                                    <h4><i class="fas fa-tasks"></i> Sample Projects</h4>
+                                    <ul class="project-list">
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Portfolio Websites</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Landing Pages</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Web Applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS3 Slide -->
+                        <div class="tech-slide" data-tech="css">
+                            <div class="tech-slide-left">
+                                <div class="tech-icon-large">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <h3>CSS3</h3>
+                                <p class="tech-role">Styling & Layout</p>
+                            </div>
+                            <div class="tech-slide-right">
+                                <div class="tech-description">
+                                    <p>Modern styling language for creating responsive, beautiful interfaces. Covers Flexbox, Grid, animations, and CSS frameworks like Tailwind.</p>
+                                </div>
+                                <div class="projects-section">
+                                    <h4><i class="fas fa-tasks"></i> Sample Projects</h4>
+                                    <ul class="project-list">
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Responsive Designs</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> UI Components</li>
+                                        <li><i class="fas fa-times-circle checkbox-icon"></i> Animation Libraries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- JavaScript Slide -->
+                        <div class="tech-slide" data-tech="javascript">
+                            <div class="tech-slide-left">
+                                <div class="tech-icon-large">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h3>JavaScript</h3>
+                                <p class="tech-role">Interactive Web</p>
+                            </div>
+                            <div class="tech-slide-right">
+                                <div class="tech-description">
+                                    <p>Essential for modern web development. Students learn ES6+, DOM manipulation, async programming, and popular frameworks like React.</p>
+                                </div>
+                                <div class="projects-section">
+                                    <h4><i class="fas fa-tasks"></i> Sample Projects</h4>
+                                    <ul class="project-list">
+                                        <li><i class="fas fa-check-circle checkbox-icon checked"></i> Interactive Web Apps</li>
+                                        <li><i class="fas fa-check-circle checkbox-icon checked"></i> Single Page Applications</li>
+                                        <li><i class="fas fa-check-circle checkbox-icon checked"></i> Real-time Features</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-arrow next-arrow" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Carousel Navigation -->
+            <div class="carousel-controls">
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" data-index="0"></span>
+                    <span class="carousel-dot" data-index="1"></span>
+                    <span class="carousel-dot" data-index="2"></span>
+                    <span class="carousel-dot" data-index="3"></span>
+                    <span class="carousel-dot" data-index="4"></span>
+                </div>
+                
+                <div class="swipe-hint">
+                    <i class="fas fa-arrows-alt-h"></i>
+                    <span>Swipe or drag to explore technologies</span>
+                </div>
+            </div>
+            
+            <!-- Progressive Learning Approach -->
+            <div class="progressive-approach">
+                <div class="approach-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="approach-content">
+                    <h3>Progressive Learning Approach</h3>
+                    <p>Students progress from foundational concepts to advanced applications through hands-on projects, real-world case studies, and collaborative team work. Each technology builds upon previous knowledge, creating a comprehensive skill set that prepares graduates for immediate industry contribution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Student Output Details Modal -->
+    <div id="outputDetailsModal" class="modal">
+        <div class="output-modal-content">
+            <!-- Modal Header with Project Title -->
+            <div class="output-modal-header">
+                <h2 id="outputModalTitle">Project Title</h2>
+                <span class="close-btn" id="closeOutputModal">&times;</span>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="output-modal-body">
+                <!-- Project Logo in right white space -->
+                <div class="modal-side-logo">
+                    <img id="projectLogo" src="" alt="Project Logo">
+                </div>
+                <!-- Project Type Badge and Developer Info -->
+                <div class="output-modal-top">
+                    <div class="project-type-badge">
+                        <i class="fas fa-desktop"></i>
+                        <span id="outputProjectType">Desktop Application</span>
+                    </div>
+                    <div class="developer-info">
+                        <span class="dev-label">Developed by</span>
+                        <span class="dev-team" id="outputDevTeam">Team Alpha (BSIT-3)</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="output-action-buttons">
+                    <button class="action-btn source-code-btn" id="viewSourceBtn">
+                        <i class="fab fa-github"></i> View Source Code
+                        <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+
+                <!-- Open Source Repository Section -->
+                <div class="open-source-section" id="openSourceSection">
+                    <div class="open-source-header">
+                        <i class="fab fa-github"></i>
+                        <span>Open Source Repository</span>
+                    </div>
+                    <p id="openSourceDesc">This project is open-source and available on GitHub. Students can fork, contribute, and learn from the codebase.</p>
+                    <div class="repo-link">
+                        Repository: <a href="#" id="repoLink" target="_blank">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
+                <div class="project-overview-section">
+                    <h3>Project Overview</h3>
+                    <p id="outputOverview">Project description goes here...</p>
+                </div>
+
+                <!-- Project Stats Cards -->
+                <div class="project-stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputDuration">4 months</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputTeamSize">4 students</div>
+                            <div class="stat-label">Team Size</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-code"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputTechCount">4</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies Used -->
+                <div class="technologies-section">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags" id="outputTechTags">
+                        <!-- Tech tags will be populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="key-features-section">
+                    <h3>Key Features</h3>
+                    <ul class="features-list" id="outputFeaturesList">
+                        <!-- Features will be populated by JS -->
+                    </ul>
+                </div>
+
+                <!-- Screenshots Section -->
+                <div class="screenshots-section">
+                    <h3>Screenshots</h3>
+                    <div class="screenshots-grid" id="outputScreenshots">
+                        <!-- Screenshots will be dynamically populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Project Outcome -->
+                <div class="project-outcome-section" id="outputOutcomeSection">
+                    <h3>Project Outcome</h3>
+                    <p id="outputOutcome">Deployed in university library, serving 500+ students daily</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightboxImage" src="" alt="Screenshot">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <!-- Footer Main - Four Columns -->
+            <div class="footer-main">
+                <div class="footer-column footer-brand">
+                    <img src="assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="footer-logo-img">
+                    <p class="footer-description">Shaping the future of technology through excellence in education, innovation, and character formation.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#calendar">Academic Calendar</a></li>
+                        <li><a href="#portal">Student Portal</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#news">News & Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#bs-it">BS Information Technology</a></li>
+                        <li><a href="#bs-cs">BS Computer Science</a></li>
+                        <li><a href="#associate">Associate in Computer Tech</a></li>
+                        <li><a href="#certification">Certification Courses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Urgello Street, Sambag 1, Cebu City, Philippines</span></li>
+                        <li><i class="fas fa-phone-alt"></i> <span>+63 676 767 6767</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>cite@swu.edu.ph</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom - Copyright and Social -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Southwestern University PHINMA. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SWUInfoTech" target="_blank"="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
