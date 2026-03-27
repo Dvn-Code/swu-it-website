@@ -10,15 +10,16 @@
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="logo-container">
             <a href="https://swu.phinma.edu.ph/" target="_blank" class="logo">
-                <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">
+                <!--<img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">-->
             </a>
             <div class="logo-divider"></div>
             <div class="logo it-logo">
                 <a href="#">
-                <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
+                    <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
                 </a>
             </div>
         </div>
@@ -48,52 +49,281 @@
                         <li><a href="#">Tuition Fees</a></li>
                     </ul>
                 </li>
-                <li><a href="../index.html#footer">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="section-padding">
-        <div class="section-header text-center">
-            <h2>About SWU-IT</h2>
-            <p>Learn more about our College of Information Technology and what makes us unique.</p>
-        </div>
+    <!-- HERO BANNER -->
+    <section class="about-hero">
+        <a href="../index.html" class="about-back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <h1>About the College of IT</h1>
+        <p>Southwestern University PHINMA's College of Information Technology is dedicated to producing competent, innovative, and industry-ready IT professionals.</p>
+    </section>
 
-        <div style="text-align: center; padding: 100px 20px;">
-            <i class="fas fa-university" style="font-size: 5rem; color: var(--primary-red); margin-bottom: 30px;"></i>
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Page Coming Soon</h2>
-            <p style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                We're currently crafting a comprehensive overview of our College of Information Technology, 
-                including our history, mission, vision, faculty profiles, and academic programs. 
-                Stay tuned for detailed information about what makes SWU-IT the premier choice for aspiring tech professionals.
-            </p>
-            <a href="../index.html" class="btn-red">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
+    <!-- MISSION / VISION / STATS -->
+    <section class="section-padding about-mv-section">
+        <div class="about-mv-grid">
+
+            <div class="about-mv-card">
+                <h3 class="about-mv-title">
+                    <span class="about-mv-icon"><i class="fas fa-bullseye"></i></span>
+                    Our Mission
+                </h3>
+                <p>To provide quality information technology education that develops competent professionals equipped with technical skills, critical thinking, and ethical values. We are committed to fostering innovation through hands-on learning, industry collaboration, and community engagement.</p>
+            </div>
+
+            <div class="about-mv-card">
+                <h3 class="about-mv-title">
+                    <span class="about-mv-icon"><i class="fas fa-graduation-cap"></i></span>
+                    Our Vision
+                </h3>
+                <p>To be a leading college of information technology in the Visayas, recognized for producing globally competitive IT professionals who drive technological innovation and contribute meaningfully to society.</p>
+            </div>
+
+            <div class="about-stats-grid">
+                <div class="about-stat-card">
+                    <div class="about-stat-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="about-stat-number">6</div>
+                    <div class="about-stat-label">Expert Faculty</div>
+                </div>
+                <div class="about-stat-card">
+                    <div class="about-stat-icon"><i class="fas fa-award"></i></div>
+                    <div class="about-stat-number">95%</div>
+                    <div class="about-stat-label">Employment Rate</div>
+                </div>
+                <div class="about-stat-card">
+                    <div class="about-stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="about-stat-number">500+</div>
+                    <div class="about-stat-label">Active Students</div>
+                </div>
+                <div class="about-stat-card">
+                    <div class="about-stat-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="about-stat-number">15+</div>
+                    <div class="about-stat-label">Industry Partners</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- FACULTY SECTION -->
+    <section class="section-padding bg-gray" id="faculty-section">
+        <div class="section-header text-center">
+            <p class="faculty-section-label">Our Team</p>
+            <h2>Faculty Members</h2>
+            <p>Our dedicated faculty brings a blend of academic expertise and industry experience to prepare students for successful IT careers.</p>
+        </div>
+
+        <div class="faculty-grid">
+
+            <div class="faculty-card" data-faculty="santos">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/r-santos.jpg" alt="Dr. Ricardo M. Santos"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">DC</span>
+                    </div>
+                    <span class="faculty-role-badge badge-dean">Dean</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Dr. Desiree Cendana Perreras</h4>
+                    <div class="faculty-position">Dean, College of Information Technology</div>
+                    <div class="tag-container faculty-tags">
+                        <span>Software Engineering</span>
+                        <span>AI &amp; Machine Learning</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> desiree.cendana@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-faculty="reyes">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/m-reyes.jpg" alt="Prof. Maria Elena C. Reyes"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">IP</span>
+                    </div>
+                    <span class="faculty-role-badge badge-depthead">Senior Faculty</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Dr. Ira Pongasi</h4>
+                    <div class="faculty-position">Senior Faculty</div>
+                    <div class="tag-container faculty-tags">
+                        <span>Web Development</span>
+                        <span>Database Systems</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> ira.pongasi@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-faculty="delacruz">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/j-delacruz.jpg" alt="Prof. Juan Carlos B. Dela Cruz"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">AI</span>
+                    </div>
+                    <span class="faculty-role-badge badge-senior">Faculty</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Ms. Almie Illustrisimo</h4>
+                    <div class="faculty-position">Faculty</div>
+                    <div class="tag-container faculty-tags">
+                        <span>Web Development</span>
+                        <span>Human Computer Interaction</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> almie.illustrisimo@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-faculty="lim">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/a-lim.jpg" alt="Prof. Angela T. Lim"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">AM</span>
+                    </div>
+                    <span class="faculty-role-badge badge-faculty">Faculty</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Mr. Althani Miguel</h4>
+                    <div class="faculty-position">Faculty, Networking &amp; Security</div>
+                    <div class="tag-container faculty-tags">
+                        <span>UI/UX Design</span>
+                        <span>Java Programming</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> althani.miguel@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-faculty="garcia">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/m-garcia.jpg" alt="Prof. Mark Anthony R. Garcia"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">MJ</span>
+                    </div>
+                    <span class="faculty-role-badge badge-faculty">Faculty</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Mr. Jimuel</h4>
+                    <div class="faculty-position">Faculty, Mobile &amp; Emerging Tech</div>
+                    <div class="tag-container faculty-tags">
+                        <span>Mobile Development</span>
+                        <span>IoT</span>
+                        <span>Cloud Computing</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> jimuel@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-faculty="tan">
+                <div class="faculty-card-header">
+                    <div class="faculty-avatar">
+                        <img src="../assets/images/faculty/c-tan.jpg" alt="Prof. Christine Joy S. Tan"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <span class="faculty-initials" style="display:none;">MJ</span>
+                    </div>
+                    <span class="faculty-role-badge badge-faculty">Faculty</span>
+                </div>
+                <div class="faculty-card-body">
+                    <h4>Ms. Jo</h4>
+                    <div class="faculty-position">Faculty, Multimedia &amp; UI/UX</div>
+                    <div class="tag-container faculty-tags">
+                        <span>UI/UX Design</span>
+                        <span>Multimedia Systems</span>
+                    </div>
+                    <div class="faculty-email-row"><i class="fas fa-envelope"></i> c.tan@swu.edu.ph</div>
+                    <div class="faculty-view-profile"><span>View full profile</span><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FACULTY MODAL -->
+    <div id="facultyModal" class="modal">
+        <div class="modal-content faculty-modal-content">
+
+            <!-- Top bar: name + close button -->
+            <div class="faculty-modal-topbar">
+                <span id="modalTopName"></span>
+                <span class="close-btn" id="closeFacultyModal">&times;</span>
+            </div>
+
+            <!-- Profile header: avatar + name block -->
+            <div class="faculty-modal-profile-header">
+                <!-- Avatar — img tries photo, span shows initials as fallback -->
+                <div class="faculty-modal-avatar" id="modalFacultyAvatar">
+                    <img src="" alt=""
+                         style="display:none; width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                    <span style="display:none;"></span>
+                </div>
+                <div class="faculty-modal-name-block">
+                    <span class="faculty-modal-role-badge" id="modalFacultyRoleBadge"></span>
+                    <h2 id="modalFacultyName"></h2>
+                    <div class="faculty-modal-position" id="modalFacultyTitle"></div>
+                </div>
+            </div>
+
+            <!-- Email row -->
+            <div class="faculty-modal-email-row">
+                <i class="fas fa-envelope"></i>
+                <span id="modalFacultyEmail"></span>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body faculty-modal-body">
+                <div class="faculty-modal-section">
+                    <h3>Biography</h3>
+                    <p id="modalFacultyBio"></p>
+                </div>
+                <div class="faculty-modal-section">
+                    <h3>Education</h3>
+                    <div class="faculty-modal-edu-box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span id="modalFacultyEducation"></span>
+                    </div>
+                </div>
+                <div class="faculty-modal-section">
+                    <h3>Areas of Specialization</h3>
+                    <div class="faculty-modal-spec-tags" id="modalFacultySpecialization"></div>
+                </div>
+                <div class="faculty-modal-section">
+                    <h3>Courses Taught</h3>
+                    <ul class="faculty-modal-courses" id="modalFacultyCourses"></ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer-content">
-            <!-- Footer Main - Four Columns -->
             <div class="footer-main">
                 <div class="footer-column footer-brand">
                     <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="footer-logo-img">
                     <p class="footer-description">Shaping the future of technology through excellence in education, innovation, and character formation.</p>
                 </div>
-
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#admissions">Admissions</a></li>
                         <li><a href="#calendar">Academic Calendar</a></li>
                         <li><a href="#portal">Student Portal</a></li>
-                        <li><a href="#faculty">Faculty</a></li>
-                        <li><a href="#news">News & Events</a></li>
+                        <li><a href="#faculty-section">Faculty</a></li>
+                        <li><a href="#news">News &amp; Events</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>Programs</h3>
                     <ul>
@@ -103,7 +333,6 @@
                         <li><a href="#certification">Certification Courses</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul class="contact-list">
@@ -113,8 +342,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Footer Bottom - Copyright and Social -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Southwestern University PHINMA. All rights reserved.</p>
                 <div class="social-icons">

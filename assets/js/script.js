@@ -860,13 +860,8 @@ function smoothPageTransition(event, url) {
     if (url.startsWith('http') || url.startsWith('#') || url === 'javascript:void(0)') {
         return; // Let it behave normally
     }
-    
     event.preventDefault();
-    
-    // Add transition class
     document.body.classList.add('page-transitioning');
-    
-    // Navigate after animation completes
     setTimeout(() => {
         window.location.href = url;
     }, 150); // Match the fadeOut animation duration
@@ -876,11 +871,9 @@ function smoothPageTransition(event, url) {
 document.addEventListener('DOMContentLoaded', function() {
     // Get all links in the page
     const allLinks = document.querySelectorAll('a');
-    
     allLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            
             // Only apply transition to internal page links
             if (href && 
                 !href.startsWith('http') && 
@@ -891,4 +884,170 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // ===== FACULTY MODAL LOGIC (About SWU-IT Page) =====
+    const facultyData = {
+        santos: {
+            initials: 'RS',
+            role: 'Dean',
+            name: 'Dr. Ricardo M. Santos',
+            title: 'Dean, College of Information Technology',
+            email: 'r.santos@swu.edu.ph',
+            photo: '../assets/images/faculty/r-santos.jpg',
+            bio: 'Dr. Santos has over 20 years of experience in academia and industry. He has led the College of IT since 2018, driving curriculum modernization and forging partnerships with leading tech companies in Cebu and beyond.',
+            education: 'Ph.D. Computer Science, University of the Philippines',
+            specialization: ['Software Engineering', 'AI & Machine Learning'],
+            courses: ['IT Capstone Project', 'Advanced Software Engineering', 'Research Methods in IT'],
+        },
+        reyes: {
+            initials: 'MR',
+            role: 'Department Head',
+            name: 'Prof. Maria Elena C. Reyes',
+            title: 'Department Head, Software Development',
+            email: 'm.reyes@swu.edu.ph',
+            photo: '../assets/images/faculty/m-reyes.jpg',
+            bio: 'Prof. Reyes specializes in full-stack web development and database management. She coordinates the capstone program and mentors student teams on industry-partnered projects.',
+            education: 'M.S. Information Technology, Cebu Institute of Technology',
+            specialization: ['Web Development', 'Database Systems'],
+            courses: ['Web Development', 'Database Management Systems', 'Systems Analysis & Design'],
+        },
+        delacruz: {
+            initials: 'JD',
+            role: 'Senior Faculty',
+            name: 'Prof. Juan Carlos B. Dela Cruz',
+            title: 'Senior Faculty, Programming',
+            email: 'j.delacruz@swu.edu.ph',
+            photo: '../assets/images/faculty/j-delacruz.jpg',
+            bio: 'Prof. Dela Cruz brings deep expertise in Java and object-oriented paradigms. He has guided multiple award-winning student teams at regional programming competitions.',
+            education: 'M.S. Computer Science, University of San Carlos',
+            specialization: ['Java Programming', 'Object-Oriented Design'],
+            courses: ['Object-Oriented Programming', 'Data Structures & Algorithms', 'Software Design Patterns'],
+        },
+        lim: {
+            initials: 'AL',
+            role: 'Faculty',
+            name: 'Prof. Angela T. Lim',
+            title: 'Faculty, Networking & Security',
+            email: 'a.lim@swu.edu.ph',
+            photo: '../assets/images/faculty/a-lim.jpg',
+            bio: "Prof. Lim is a certified network professional with hands-on experience in enterprise infrastructure. She leads the college's cybersecurity awareness initiatives and student-run security lab.",
+            education: 'M.S. Information Security, Ateneo de Manila University',
+            specialization: ['Network Administration', 'Cybersecurity'],
+            courses: ['Computer Networks', 'Network Security', 'Ethical Hacking'],
+        },
+        garcia: {
+            initials: 'MG',
+            role: 'Faculty',
+            name: 'Prof. Mark Anthony R. Garcia',
+            title: 'Faculty, Mobile & Emerging Tech',
+            email: 'm.garcia@swu.edu.ph',
+            photo: '../assets/images/faculty/m-garcia.jpg',
+            bio: 'Prof. Garcia is passionate about mobile platforms, IoT, and cloud services. He has co-developed several mobile applications deployed in local government units across Cebu.',
+            education: 'M.S. Information Technology, De La Salle University',
+            specialization: ['Mobile Development', 'IoT', 'Cloud Computing'],
+            courses: ['Mobile Application Development', 'Internet of Things', 'Cloud Infrastructure'],
+        },
+        tan: {
+            initials: 'CT',
+            role: 'Faculty',
+            name: 'Prof. Christine Joy S. Tan',
+            title: 'Faculty, Multimedia & UI/UX',
+            email: 'c.tan@swu.edu.ph',
+            photo: '../assets/images/faculty/c-tan.jpg',
+            bio: 'Prof. Tan merges creative design thinking with technical execution. She has won several design awards and regularly mentors student teams in UI/UX competitions and hackathons.',
+            education: 'M.A. Multimedia Arts, Far Eastern University',
+            specialization: ['UI/UX Design', 'Multimedia Systems'],
+            courses: ['UI/UX Design', 'Multimedia Systems', 'Human-Computer Interaction'],
+        },
+    };
+
+    // Modal elements — IDs match the HTML exactly
+    const facultyModal           = document.getElementById('facultyModal');
+    const closeFacultyModal      = document.getElementById('closeFacultyModal');
+    const modalFacultyAvatar     = document.getElementById('modalFacultyAvatar');
+    const modalFacultyName       = document.getElementById('modalFacultyName');
+    const modalFacultyTitle      = document.getElementById('modalFacultyTitle');
+    const modalFacultyEmail      = document.getElementById('modalFacultyEmail');
+    const modalFacultyBio        = document.getElementById('modalFacultyBio');
+    const modalFacultyEducation  = document.getElementById('modalFacultyEducation');
+    const modalFacultySpecialization = document.getElementById('modalFacultySpecialization');
+    const modalFacultyCourses    = document.getElementById('modalFacultyCourses');
+
+    // Only run modal logic if the modal exists on this page
+    if (facultyModal) {
+
+        // Open modal on card click
+        document.querySelectorAll('.faculty-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const key  = card.getAttribute('data-faculty');
+                const data = facultyData[key];
+                if (!data) return;
+
+                // Top bar name
+                const topName = document.getElementById('modalTopName');
+                if (topName) topName.textContent = data.name;
+
+                // Role badge
+                const roleBadge = document.getElementById('modalFacultyRoleBadge');
+                if (roleBadge) roleBadge.textContent = data.role;
+
+                // Avatar: try real photo, fall back to initials on error
+                const img  = modalFacultyAvatar.querySelector('img');
+                const span = modalFacultyAvatar.querySelector('span');
+                img.style.display  = 'block';
+                span.style.display = 'none';
+                img.src = data.photo;
+                img.alt = data.name;
+                img.onerror = function () {
+                    this.style.display = 'none';
+                    span.style.display = 'flex';
+                    span.textContent   = data.initials;
+                };
+
+                // Name / title / email
+                modalFacultyName.textContent  = data.name;
+                modalFacultyTitle.textContent = data.title;
+                modalFacultyEmail.textContent = data.email;
+
+                // Bio & education
+                modalFacultyBio.textContent       = data.bio;
+                modalFacultyEducation.textContent = data.education;
+
+                // Specialization tags
+                modalFacultySpecialization.innerHTML =
+                    data.specialization.map(s => `<span>${s}</span>`).join('');
+
+                // Courses
+                modalFacultyCourses.innerHTML =
+                    data.courses.map(c => `<li><i class="fas fa-book-open"></i> ${c}</li>`).join('');
+
+                facultyModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close — X button
+        if (closeFacultyModal) {
+            closeFacultyModal.onclick = function () {
+                facultyModal.style.display = 'none';
+                document.body.style.overflow = '';
+            };
+        }
+
+        // Close — click outside modal content
+        window.addEventListener('click', function (e) {
+            if (e.target === facultyModal) {
+                facultyModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close — Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && facultyModal.style.display === 'block') {
+                facultyModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
