@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Outputs - SWU Information Technology</title>
+    <link rel="icon" type="image/png" href="../assets/images/branding/logos/SWU-PHINMA-Seal.jpg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,12 +12,10 @@
 
     <header>
         <div class="logo-container">
-            <a href="https://swu.phinma.edu.ph/" target="_blank" class="logo">
-                <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">
-            </a>
+            
             <div class="logo-divider"></div>
             <div class="logo it-logo">
-                <a href="#">
+                <a href="../index.html">
                 <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
                 </a>
             </div>
@@ -36,7 +35,7 @@
                     <a href="#">Student Life <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="../index.html#student-outputs-section">Student Outputs</a></li>
-                        <li><a href="organizations.html">Organizations</a></li>
+                        <li><a href="organizations.html">Organizations & Events</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -52,29 +51,263 @@
         </nav>
     </header>
 
-    <section class="section-padding">
-        <div class="section-header text-center">
-            <h2>All Student Outputs</h2>
-            <p>Explore the complete collection of innovative projects created by our talented IT students.</p>
-        </div>
-
-        <div style="text-align: center; padding: 100px 20px;">
-            <i class="fas fa-code" style="font-size: 5rem; color: var(--primary-red); margin-bottom: 30px;"></i>
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">More Outputs Coming Soon</h2>
-            <p style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                We're currently compiling a comprehensive showcase of all student projects and innovations. 
-                This page will feature detailed portfolios, project demonstrations, and achievements from our IT students.
-            </p>
-            <a href="../index.html#student-outputs-section" class="btn-red">
-                <i class="fas fa-arrow-left"></i> Back to Showcased Projects
+    <!-- Page Header -->
+    <section class="outputs-page-header">
+        <div class="outputs-header-content">
+            <a href="../index.html#student-outputs-section" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
             </a>
+            <h1>All Student Projects</h1>
+            <p>Browse all student-developed projects from the College of Information Technology. Each project is open-source and demonstrates real-world problem-solving skills.</p>
+            
+            <!-- Stats -->
+            <div class="outputs-stats">
+                <div class="stat-badge">
+                    <i class="fas fa-code"></i>
+                    <span id="totalProjectsCount">0</span> Projects
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Search and Filter Section -->
+    <section class="outputs-search-section">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search projects by title, developer, or technology...">
+                <button id="clearSearch" class="clear-search-btn" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="filter-wrapper">
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="filterBtn">
+                        <i class="fas fa-filter"></i> Filter
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="filter-menu" id="filterMenu">
+                        <div class="filter-section">
+                            <h4>Project Type</h4>
+                            <label><input type="checkbox" value="Website Application"> Website Application</label>
+                            <label><input type="checkbox" value="Web Application"> Web Application</label>
+                            <label><input type="checkbox" value="Cybersecurity"> Cybersecurity</label>
+                            <label><input type="checkbox" value="Data Analytics"> Data Analytics</label>
+                            <label><input type="checkbox" value="E-Commerce"> E-Commerce</label>
+                            <label><input type="checkbox" value="Healthcare"> Healthcare</label>
+                            <label><input type="checkbox" value="Game Development"> Game Development</label>
+                            <label><input type="checkbox" value="AI & Automation"> AI & Automation</label>
+                            <label><input type="checkbox" value="Mobile Development"> Mobile Development</label>
+                        </div>
+                        <div class="filter-actions">
+                            <button id="applyFilters" class="apply-filters-btn">Apply Filters</button>
+                            <button id="clearFilters" class="clear-filters-btn">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="active-filters" id="activeFilters"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="outputs-grid-section">
+        <div class="projects-grid-container">
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+            
+            <!-- Projects Coming Soon Grid (Hidden by default, shows when no projects match) -->
+            <div class="projects-coming-soon" id="projectsComingSoon" style="display: none;">
+                <div class="coming-soon-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>More Projects Coming Soon</h3>
+                    <p>We're constantly adding new student projects. Check back regularly for updates!</p>
+                </div>
+                <div class="coming-soon-grid">
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Machine Learning Projects</h4>
+                        <p>AI and ML projects from advanced students</p>
+                        <span class="coming-badge">Coming Soon</span>
+                    </div>
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h4>Cloud Computing</h4>
+                        <p>AWS, Azure, and cloud architecture projects</p>
+                        <span class="coming-badge">Coming Soon</span>
+                    </div>
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>iOS Applications</h4>
+                        <p>Swift and iOS development projects</p>
+                        <span class="coming-badge">Coming Soon</span>
+                    </div>
+                    <div class="coming-soon-card">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Big Data Analytics</h4>
+                        <p>Data engineering and analytics projects</p>
+                        <span class="coming-badge">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No projects found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+                <button id="resetAllBtn" class="btn-red">Reset All</button>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination-container" id="paginationContainer">
+            <button class="pagination-btn prev-page" id="prevPageBtn" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <div class="pagination-pages" id="paginationPages">
+                <!-- Page numbers will be dynamically generated -->
+            </div>
+            <button class="pagination-btn next-page" id="nextPageBtn">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+<section class="contact-form-section" id="contact-section">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Contact Us!</h2>
+            <p>Want to know more about SWU PHINMA?</p>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Form Column -->
+            <div class="contact-form-col">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobile">Mobile <span class="required">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course/SHS Strand <span class="required">*</span></label>
+                        <select id="course" name="course" required>
+                            <option value="">Select your course or strand</option>
+                            <option value="BS Information Technology">BS Information Technology</option>
+                            <option value="BS Computer Science">BS Computer Science</option>
+                            <option value="Associate in Computer Technology">Associate in Computer Technology</option>
+                            <option value="STEM Strand">STEM Strand</option>
+                            <option value="ABM Strand">ABM Strand</option>
+                            <option value="GAS Strand">GAS Strand</option>
+                            <option value="HUMSS Strand">HUMSS Strand</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Leave your message here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacyConsent" required>
+                            <span>I Agree, read our <a href="https://swu.phinma.edu.ph/privacy-policy/" target="_blank">Privacy and Policy</a> to learn more.</span>
+                        </label>
+                    </div>
+                    
+                    <!-- reCAPTCHA v2 -->
+                    <div class="form-group recaptcha-group">
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <div id="recaptchaError" class="error-message" style="display: none;">Please complete the reCAPTCHA verification.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">SUBMIT</span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Submitting...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Info Column -->
+            <div class="contact-info-col">
+                <div class="join-family-card">
+                    <h3>Join our Growing Family</h3>
+                    <p>Be part of the SWU PHINMA community and shape your future with us.</p>
+                    <a href="https://docs.google.com/forms/d/1rOwT2UNM_QASI-7Hyff55Ghn2tt4M5JOiWLNKVpQNzg/viewform?edit_requested=true" 
+                       target="_blank" 
+                       class="join-btn">
+                        Join Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Map -->
+                <div class="map-container">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.0454061016417!2d123.88933749290189!3d10.303180795724248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9995396ee3a2b%3A0xf4f76cc2e3810ab!2sSouthwestern%20University%20(SWU)%20PHINMA!5e1!3m2!1sen!2sph!4v1774633759139!5m2!1sen!2sph"
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Urgello Street, Sambag 1, Cebu City, Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    <div class="success-modal-content">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Reaching Out!</h3>
+        <p>Your message has been sent successfully. We'll get back to you within 24-48 hours.</p>
+        <button class="close-success-btn" onclick="closeSuccessModal()">Close</button>
+    </div>
+</div>
 
     <!-- Footer Section -->
     <footer class="footer" id="footer">
         <div class="footer-content">
-            <!-- Footer Main - Four Columns -->
             <div class="footer-main">
                 <div class="footer-column footer-brand">
                     <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="footer-logo-img">
@@ -112,7 +345,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom - Copyright and Social -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Southwestern University PHINMA. All rights reserved.</p>
                 <div class="social-icons">
@@ -124,6 +356,99 @@
         </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+    <!-- Output Details Modal (reused from main page) -->
+    <div id="outputDetailsModal" class="modal">
+        <div class="output-modal-content">
+            <div class="output-modal-header">
+                <h2 id="outputModalTitle">Project Title</h2>
+                <span class="close-btn" id="closeOutputModal">&times;</span>
+            </div>
+            <div class="output-modal-body">
+                <div class="modal-side-logo">
+                    <img id="projectLogo" src="" alt="Project Logo">
+                </div>
+                <div class="output-modal-top">
+                    <div class="project-type-badge">
+                        <i class="fas fa-desktop"></i>
+                        <span id="outputProjectType">Desktop Application</span>
+                    </div>
+                    <div class="developer-info">
+                        <span class="dev-label">Developed by</span>
+                        <span class="dev-team" id="outputDevTeam">Team Alpha (BSIT-3)</span>
+                    </div>
+                </div>
+                <div class="output-action-buttons">
+                    <button class="action-btn source-code-btn" id="viewSourceBtn">
+                        <i class="fab fa-github"></i> View Source Code
+                        <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+                <div class="open-source-section" id="openSourceSection">
+                    <div class="open-source-header">
+                        <i class="fab fa-github"></i>
+                        <span>Open Source Repository</span>
+                    </div>
+                    <p id="openSourceDesc"></p>
+                    <div class="repo-link">
+                        Repository: <a href="#" id="repoLink" target="_blank">View on GitHub →</a>
+                    </div>
+                </div>
+                <div class="project-overview-section">
+                    <h3>Project Overview</h3>
+                    <p id="outputOverview"></p>
+                </div>
+                <div class="project-stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputDuration">4 months</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputTeamSize">4 students</div>
+                            <div class="stat-label">Team Size</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-code"></i>
+                        <div class="stat-content">
+                            <div class="stat-value" id="outputTechCount">4</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="technologies-section">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags" id="outputTechTags"></div>
+                </div>
+                <div class="key-features-section">
+                    <h3>Key Features</h3>
+                    <ul class="features-list" id="outputFeaturesList"></ul>
+                </div>
+                <div class="screenshots-section">
+                    <h3>Screenshots</h3>
+                    <div class="screenshots-grid" id="outputScreenshots"></div>
+                </div>
+                <div class="project-outcome-section" id="outputOutcomeSection">
+                    <h3>Project Outcome</h3>
+                    <p id="outputOutcome"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightboxImage" src="" alt="Screenshot">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/outputs.js"></script>
 </body>
 </html>

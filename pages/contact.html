@@ -7,18 +7,18 @@
     <link rel="icon" type="image/png" href="../assets/images/branding/logos/SWU-PHINMA-Seal.jpg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <a href="https://swu.phinma.edu.ph/" target="_blank" class="logo">
-                <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">
-            </a>
+           
             <div class="logo-divider"></div>
             <div class="logo it-logo">
-                <a href="#">
-                <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
+                <a href="../index.html">
+                    <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
                 </a>
             </div>
         </div>
@@ -48,35 +48,228 @@
                         <li><a href="#">Tuition Fees</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="section-padding">
-        <div class="section-header text-center">
-            <h2>Contact Us</h2>
-            <p>Get in touch with the College of Information Technology.</p>
+    <!-- Page Hero -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with the College of Information Technology. We'd love to hear from you!</p>
         </div>
+    </section>
 
-        <div style="text-align: center; padding: 100px 20px;">
-            <i class="fas fa-envelope" style="font-size: 5rem; color: var(--primary-red); margin-bottom: 30px;"></i>
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Page Coming Soon</h2>
-            <p style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                We're creating an interactive contact page with a comprehensive contact form, 
-                department directory, office hours, campus map, and multiple ways to reach our faculty and staff. 
-                In the meantime, feel free to reach us through the contact information in the footer below.
-            </p>
-            <a href="../index.html" class="btn-red">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
+    <!-- Contact Information Cards -->
+    <section class="contact-info-cards">
+        <div class="contact-cards-container">
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>Urgello Street, Sambag 1<br>Cebu City, Philippines 6000</p>
+                <a href="https://maps.google.com" target="_blank" class="contact-card-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>+63 676 767 6767<br>+63 32 123 4567</p>
+                <a href="tel:+636767676767" class="contact-card-link">Call Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>cite@swu.edu.ph<br>info@swu.edu.ph</p>
+                <a href="mailto:cite@swu.edu.ph" class="contact-card-link">Send Email <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 12:00 PM</p>
+                <span class="contact-card-note">Closed on Sundays & Holidays</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Leave a Message</h2>
+                <p>Have questions or concerns? Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Form Column -->
+                <div class="contact-form-col">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number <span class="required">*</span></label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address <span class="required">*</span></label>
+                                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="course">Course/SHS Strand <span class="required">*</span></label>
+                            <select id="course" name="course" required>
+                                <option value="">Select your course or strand</option>
+                                <option value="BS Information Technology">BS Information Technology</option>
+                                <option value="BS Computer Science">BS Computer Science</option>
+                                <option value="Associate in Computer Technology">Associate in Computer Technology</option>
+                                <option value="STEM Strand">STEM Strand</option>
+                                <option value="ABM Strand">ABM Strand</option>
+                                <option value="GAS Strand">GAS Strand</option>
+                                <option value="HUMSS Strand">HUMSS Strand</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Leave your message here..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacyConsent" required>
+                                <span>I Agree, read our <a href="https://swu.phinma.edu.ph/privacy-policy/" target="_blank">Privacy and Policy</a> to learn more.</span>
+                            </label>
+                        </div>
+                        
+                        <!-- reCAPTCHA -->
+                        <div class="form-group recaptcha-group">
+                            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                            <div id="recaptchaError" class="error-message" style="display: none;">Please complete the reCAPTCHA verification.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span class="btn-text">SUBMIT</span>
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Submitting...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Info Column -->
+                <div class="contact-info-col">
+                    <div class="join-family-card">
+                        <div class="join-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Join our Growing Family</h3>
+                        <p>Be part of the SWU PHINMA community and shape your future with us.</p>
+                        <a href="https://docs.google.com/forms/d/1rOwT2UNM_QASI-7Hyff55Ghn2tt4M5JOiWLNKVpQNzg/viewform?edit_requested=true" 
+                           target="_blank" 
+                           class="join-btn">
+                            Apply Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.597237398266!2d123.892299!3d10.315720!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999f3bc97e6ad%3A0x9bdb8ea24fd8d4b9!2sSouthwestern%20University%20PHINMA!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <div class="map-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Urgello Street, Sambag 1, Cebu City, Philippines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about our programs and admissions.</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I apply for admission?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can apply online through our admissions portal or visit our admissions office. The application process includes submitting requirements, taking the entrance exam, and an interview. For more details, visit our Admissions section.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the tuition fees for IT programs?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tuition fees vary per program and academic year. For the most accurate and updated information, please contact our admissions office or visit the Admissions section for a detailed breakdown of fees and payment options.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are scholarships available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, SWU PHINMA offers various scholarships including academic excellence awards, athletic scholarships, and financial assistance programs. Contact the Scholarship Office for more information on eligibility and requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What career opportunities await IT graduates?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our IT graduates have a 95% employment rate and work as software developers, network security specialists, data analysts, IT consultants, and more. Many are employed by top tech companies both locally and internationally.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer" id="footer">
         <div class="footer-content">
-            <!-- Footer Main - Four Columns -->
             <div class="footer-main">
                 <div class="footer-column footer-brand">
                     <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="footer-logo-img">
@@ -114,7 +307,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom - Copyright and Social -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Southwestern University PHINMA. All rights reserved.</p>
                 <div class="social-icons">
@@ -126,6 +318,18 @@
         </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You for Reaching Out!</h3>
+            <p>Your message has been sent successfully. We'll get back to you within 24-48 hours.</p>
+            <button class="close-success-btn" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/contact.js"></script>
 </body>
 </html>

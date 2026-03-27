@@ -12,12 +12,10 @@
 
     <header>
         <div class="logo-container">
-            <a href="https://swu.phinma.edu.ph/" target="_blank" class="logo">
-                <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="logo-img">
-            </a>
+            
             <div class="logo-divider"></div>
             <div class="logo it-logo">
-                <a href="#">
+                <a href="../index.html">
                 <img src="../assets/images/branding/logos/it_banner.swu.png" alt="SWU Information Technology" class="it-logo-img">
                 </a>
             </div>
@@ -37,7 +35,7 @@
                     <a href="#">Student Life <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="../index.html#student-outputs-section">Student Outputs</a></li>
-                        <li><a href="organizations.html">Organizations</a></li>
+                        <li><a href="organizations.html">Organizations & Events</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -48,35 +46,190 @@
                         <li><a href="#">Tuition Fees</a></li>
                     </ul>
                 </li>
-                <li><a href="../index.html#footer">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="section-padding">
-        <div class="section-header text-center">
-            <h2>Student Organizations</h2>
-            <p>Discover the vibrant community of tech-focused student organizations at SWU-IT.</p>
-        </div>
-
-        <div style="text-align: center; padding: 100px 20px;">
-            <i class="fas fa-users" style="font-size: 5rem; color: var(--primary-red); margin-bottom: 30px;"></i>
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-dark);">Page Coming Soon</h2>
-            <p style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                We're building a comprehensive showcase of all IT student organizations, clubs, and special interest groups. 
-                Learn about leadership opportunities, tech communities, competitive programming teams, 
-                and how you can get involved in campus life while building your professional network.
-            </p>
-            <a href="../index.html" class="btn-red">
+    <!-- Page Header -->
+    <section class="orgs-page-header">
+        <div class="orgs-header-content">
+            <a href="../index.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Home
             </a>
+            <h1>Student Organizations</h1>
+            <p>Discover the vibrant community of tech-focused student organizations at SWU-IT. Join a club, build your network, and make your college experience unforgettable.</p>
+            
+            <div class="orgs-stats">
+                <div class="stat-badge">
+                    <i class="fas fa-users"></i>
+                    <span id="totalOrgsCount">0</span> Organizations
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Filter Section -->
+    <section class="orgs-filter-section">
+        <div class="filter-container">
+            <div class="filter-categories">
+                <button class="filter-category-btn active" data-category="all">All</button>
+                <button class="filter-category-btn" data-category="student-government">Student Government</button>
+                <button class="filter-category-btn" data-category="academic">Academic</button>
+                <button class="filter-category-btn" data-category="special-interest">Special Interest</button>
+                <button class="filter-category-btn" data-category="professional">Professional Development</button>
+            </div>
+            
+            <div class="results-count">
+                Showing <span id="visibleOrgsCount">0</span> organizations
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizations Grid -->
+    <section class="orgs-grid-section">
+        <div class="orgs-grid" id="orgsGrid">
+            <!-- Organizations will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section">
+        <div class="events-header">
+            <i class="fas fa-calendar-alt"></i>
+            <h2>Stay Active</h2>
+            <p>Upcoming Events</p>
+            <div class="events-subtitle">Don't miss out on workshops, competitions, and networking events organized by our student groups.</div>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+            <!-- Events will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+<section class="contact-form-section" id="contact-section">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Contact Us!</h2>
+            <p>Want to know more about SWU PHINMA?</p>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Form Column -->
+            <div class="contact-form-col">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobile">Mobile <span class="required">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course/SHS Strand <span class="required">*</span></label>
+                        <select id="course" name="course" required>
+                            <option value="">Select your course or strand</option>
+                            <option value="BS Information Technology">BS Information Technology</option>
+                            <option value="BS Computer Science">BS Computer Science</option>
+                            <option value="Associate in Computer Technology">Associate in Computer Technology</option>
+                            <option value="STEM Strand">STEM Strand</option>
+                            <option value="ABM Strand">ABM Strand</option>
+                            <option value="GAS Strand">GAS Strand</option>
+                            <option value="HUMSS Strand">HUMSS Strand</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Leave your message here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacyConsent" required>
+                            <span>I Agree, read our <a href="https://swu.phinma.edu.ph/privacy-policy/" target="_blank">Privacy and Policy</a> to learn more.</span>
+                        </label>
+                    </div>
+                    
+                    <!-- reCAPTCHA v2 -->
+                    <div class="form-group recaptcha-group">
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <div id="recaptchaError" class="error-message" style="display: none;">Please complete the reCAPTCHA verification.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">SUBMIT</span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Submitting...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Info Column -->
+            <div class="contact-info-col">
+                <div class="join-family-card">
+                    <h3>Join our Growing Family</h3>
+                    <p>Be part of the SWU PHINMA community and shape your future with us.</p>
+                    <a href="https://docs.google.com/forms/d/1rOwT2UNM_QASI-7Hyff55Ghn2tt4M5JOiWLNKVpQNzg/viewform?edit_requested=true" 
+                       target="_blank" 
+                       class="join-btn">
+                        Join Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Map -->
+                <div class="map-container">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.0454061016417!2d123.88933749290189!3d10.303180795724248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9995396ee3a2b%3A0xf4f76cc2e3810ab!2sSouthwestern%20University%20(SWU)%20PHINMA!5e1!3m2!1sen!2sph!4v1774633759139!5m2!1sen!2sph"
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Urgello Street, Sambag 1, Cebu City, Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    <div class="success-modal-content">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Reaching Out!</h3>
+        <p>Your message has been sent successfully. We'll get back to you within 24-48 hours.</p>
+        <button class="close-success-btn" onclick="closeSuccessModal()">Close</button>
+    </div>
+</div>
     <!-- Footer Section -->
     <footer class="footer" id="footer">
         <div class="footer-content">
-            <!-- Footer Main - Four Columns -->
             <div class="footer-main">
                 <div class="footer-column footer-brand">
                     <img src="../assets/images/branding/logos/university_banner.swu.png" alt="Southwestern University PHINMA Logo" class="footer-logo-img">
@@ -114,7 +267,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom - Copyright and Social -->
             <div class="footer-bottom">
                 <p>&copy; 2026 Southwestern University PHINMA. All rights reserved.</p>
                 <div class="social-icons">
@@ -126,6 +278,78 @@
         </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+    <!-- Organization Details Modal -->
+    <div id="orgModal" class="modal">
+        <div class="org-modal-content">
+            <div class="org-modal-header">
+                <div class="org-modal-logo" id="orgModalLogo">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2 id="orgModalTitle">Organization Name</h2>
+                <span class="close-btn" id="closeOrgModal">&times;</span>
+            </div>
+            <div class="org-modal-body">
+                <div class="org-modal-stats">
+                    <div class="org-stat">
+                        <i class="fas fa-user-friends"></i>
+                        <div>
+                            <div class="stat-value" id="orgModalMembers">0</div>
+                            <div class="stat-label">Members</div>
+                        </div>
+                    </div>
+                    <div class="org-stat">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <div class="stat-value" id="orgModalEstablished">0</div>
+                            <div class="stat-label">Established</div>
+                        </div>
+                    </div>
+                    <div class="org-stat">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <div class="stat-value" id="orgModalMeeting">0</div>
+                            <div class="stat-label">Meeting Schedule</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-modal-description">
+                    <h3>About the Organization</h3>
+                    <p id="orgModalDescription"></p>
+                </div>
+
+                <div class="org-modal-achievements">
+                    <h3><i class="fas fa-trophy"></i> Key Achievements</h3>
+                    <ul id="orgModalAchievements"></ul>
+                </div>
+
+                <div class="org-modal-activities">
+                    <h3><i class="fas fa-calendar-check"></i> Regular Activities</h3>
+                    <ul id="orgModalActivities"></ul>
+                </div>
+
+                <div class="org-modal-gallery">
+                    <h3><i class="fas fa-images"></i> Gallery</h3>
+                    <div class="gallery-grid" id="orgModalGallery"></div>
+                </div>
+
+                <div class="org-modal-contact">
+                    <h3><i class="fas fa-envelope"></i> Contact Information</h3>
+                    <div class="contact-info" id="orgModalContact"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightboxImage" src="" alt="Organization Gallery">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/organizations.js"></script>
 </body>
 </html>
