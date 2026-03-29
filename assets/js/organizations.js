@@ -21,7 +21,7 @@ const organizations = [
         ],
         activities: [
             "Monthly General Assemblies",
-            "IT Week Planning and Execution",
+            "IT Days 2026 Planning and Execution",
             "Student Welfare Advocacy",
             "Community Outreach Programs",
             "Freshmen Orientation and Welcoming",
@@ -34,9 +34,9 @@ const organizations = [
         ],
         contact: {
             email: "itsc@swu.edu.ph",
-            facebook: "https://facebook.com/itsc.swu",
-            room: "IT Building, Room 201",
-            advisor: "Dr. Desiree Cendana Perreras"
+            facebook: "https://web.facebook.com/swucitecouncil",
+            room: "ITSC Office, TechHub Building",
+            advisor: "Dr. Ira Pongasi"
         },
         officers: [
             { position: "President", name: "John Michael Reyes" },
@@ -79,9 +79,9 @@ const organizations = [
         ],
         contact: {
             email: "swudevs@swu.edu.ph",
-            facebook: "https://facebook.com/swudevs",
+            facebook: "https://web.facebook.com/profile.php?id=61564750572479",
             discord: "https://discord.gg/swudevs",
-            room: "IT Lab 3, IT Building",
+            room: "ITSC Office, TechHub Building",
             advisor: "Prof. Althani Miguel"
         },
         officers: [
@@ -125,10 +125,10 @@ const organizations = [
         ],
         contact: {
             email: "awscloud@swu.edu.ph",
-            facebook: "https://facebook.com/awscloudclub.swu",
+            facebook: "https://web.facebook.com/profile.php?id=61584355648026",
             discord: "https://discord.gg/awscloudclub",
-            room: "Cloud Computing Lab, IT Building",
-            advisor: "Prof. Jimuel"
+            room: "TechHub Building",
+            advisor: "Yuri Yankin"
         },
         officers: [
             { position: "President", name: "Kristine Joy Tan" },
@@ -143,14 +143,14 @@ const organizations = [
 const events = [
     {
         id: 1,
-        title: "IT Week 2025 Kickoff",
+        title: "IT Days 2026 Kickoff",
         organization: "Information Technology Student Council",
-        date: "January 20",
-        month: "Jan",
-        day: "20",
+        date: "February 12",
+        month: "Feb",
+        day: "12",
         type: "Event",
         icon: "fa-calendar-alt",
-        description: "Join us for the grand opening of IT Week 2025 with exciting activities and guest speakers."
+        description: "Join us for the grand opening of IT Days 2026 with exciting activities and guest speakers."
     },
     {
         id: 2,
