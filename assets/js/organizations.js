@@ -519,3 +519,20 @@ document.addEventListener('keydown', function(e) {
         document.body.style.overflow = '';
     }
 });
+
+// --- MOBILE HAMBURGER LOGIC ---
+const menuToggle = document.querySelector('#mobile-menu');
+const navMenu = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('is-active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('is-active');
+        navMenu.classList.remove('active');
+    });
+});
