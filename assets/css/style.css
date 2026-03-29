@@ -5181,3 +5181,90 @@ nav ul li a:hover::after {
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
+
+/* ============================================================
+   CONSOLIDATED MOBILE RESPONSIVENESS (Fixes for index.html)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* 1. Header & Nav Fixes */
+    header {
+        padding: 15px 5%;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .logo-container {
+        flex-direction: row; /* Keep logo and hamburger on one line */
+        align-items: center;
+    }
+
+    .it-logo-img {
+        height: 40px; /* Smaller logo for mobile header space */
+    }
+
+    /* 2. Hero Section Layout Fix */
+    .hero {
+        height: auto; /* Allow content to dictate height on mobile */
+        min-height: 100vh;
+        padding: 100px 5% 40px; /* Space for the fixed header */
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Scaled down from 4rem to fit phone screen */
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+
+    .admissions-badge {
+        margin-top: 0;
+        align-self: center;
+    }
+
+    /* 3. Stats Cards Fix (Prevent Overlapping) */
+    .stats-container {
+        position: relative; /* Remove absolute positioning on mobile */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px;
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .stat-card {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9); /* More solid for readability */
+    }
+
+    .stat-card h2 {
+        font-size: 1.8rem;
+    }
+
+    /* 4. Career Grid Fix */
+    .career-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+        gap: 50px; /* Space for the icons that pop out of the top */
+    }
+
+    /* 5. Section Headers */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-padding {
+        padding: 60px 5%;
+    }
+
+    /* 6. Fix for Background Video/Slider */
+    .hero::after {
+        z-index: -1; /* Ensure overlay doesn't block clicking buttons */
+    }
+}
