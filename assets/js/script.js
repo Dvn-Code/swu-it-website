@@ -1217,6 +1217,34 @@ window.addEventListener('click', function(e) {
     }
 });
 
+// --- CAMPUS SECTION SLIDERS ---
+document.querySelectorAll('.campus-slider').forEach(slider => {
+    const track = slider.querySelector('.campus-slider-track');
+    const slides = slider.querySelectorAll('.campus-slide');
+    const dots = slider.querySelectorAll('.campus-dot');
+    const prevBtn = slider.querySelector('.campus-prev');
+    const nextBtn = slider.querySelector('.campus-next');
+    const count = slides.length;
+    let current = 0;
+
+    function goTo(index) {
+        current = (index + count) % count;
+        track.style.transform = `translateX(-${current * (100 / count)}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    }, { passive: true });
+});
+
 // --- MOBILE HAMBURGER LOGIC ---
 const menuToggle = document.querySelector('#mobile-menu');
 const navMenu = document.querySelector('nav');
